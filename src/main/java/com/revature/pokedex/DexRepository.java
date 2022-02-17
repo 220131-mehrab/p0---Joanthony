@@ -27,4 +27,15 @@ public class DexRepository {
     public List<String> getPocketMonsters() {
         return pocketMonsters;
     }
+
+    public String getPokemon(String name) {
+        String result = "";
+        for (String pokemon : this.pocketMonsters) {
+           if(pokemon.contains(name)) {
+               result = pokemon;
+           }
+        }
+        return result;
+    }
 }
+
